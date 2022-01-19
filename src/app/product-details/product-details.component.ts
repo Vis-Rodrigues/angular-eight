@@ -22,6 +22,7 @@ export class ProductDetailsComponent implements OnInit {
     const routeParams = this.route.snapshot.paramMap;
     const productIdFromRoute = Number(routeParams.get('productId'));
     this.product = this.productService.getProductById(productIdFromRoute);
+    console.log("Product " + this.product);
   }
 
   addToCart(product: any) {

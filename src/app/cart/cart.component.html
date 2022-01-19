@@ -1,29 +1,31 @@
-<h3>Cart</h3>
+<h1>Carrinho de compras</h1>
 
-<p>
-  <a routerLink="/shipping">Shipping Prices</a>
-</p>
+<div *ngIf="items.length > 0; else cartEmpty">
+    <h2>Lista de compras</h2>
 
-<div class="cart-item" *ngFor="let item of items">
-  <span>{{ item.name }}</span>
-  <span>{{ item.price | currency }}</span>
+    <div class="cart-item" *ngFor="let item of items">
+      <img
+        [src]="item.imageUrl"
+        [alt]="item.name"
+        width="40%"
+        class="img-fluid rounded"
+      />
+      <p>{{ item.name }}</p>
+      <span>{{ item.name }}</span>
+      <span>{{ item.price | currency }}</span>
+      <span>1</span>
+    </div>
+  
+    <p>SUBTOTAL ({{items.length}}) ITEMS</p>
+    <h1>Total R$ {{ sumOfPrice() | currency }}</h1>
+  
+  
+    <a class="button" routerLink="">+ Adicionar Itens</a>
+    <a class="button" (click)="closeBuy()">FINALIZAR COMPRA</a>
+
 </div>
-
-<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
-
-  <div>
-    <label for="name">
-      Name
-    </label>
-    <input id="name" type="text" formControlName="name">
-  </div>
-
-  <div>
-    <label for="address">
-      Address
-    </label>
-    <input id="address" type="text" formControlName="address">
-  </div>
-
-  <button class="button" type="submit">Purchase</button>
-</form>
+<ng-template #cartEmpty>
+    <h2>Ainda não possui item :(</h2>
+    <h2>Por favor, escolha um produto</h2>
+    <a class="button back-button" routerLink="">VOLTAR</a>
+</ng-template>

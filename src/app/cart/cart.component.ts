@@ -26,4 +26,14 @@ export class CartComponent implements OnInit {
     console.warn('Your order has been submitted', this.checkoutForm.value);
     this.checkoutForm.reset();
   }
+
+  closeBuy() {
+    this.cartService.clearCart();
+    window.alert('Muito obrigada pela preferência, é um prazer tê-lo aqui conosco! Seus itens estão sendo preparados e logo serão entregues. =D');
+  }
+
+  sumOfPrice(){
+    return this.cartService.sumOfPrice();
+  }
+
 }

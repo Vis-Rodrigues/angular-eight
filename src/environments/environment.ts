@@ -4,5 +4,6 @@
 
 export const environment = {
   production: false,
+  // app_api_eight_shop : "http://ec2-50-19-19-100.compute-1.amazonaws.com:8088"
   app_api_eight_shop : "http://localhost:8088"
 };

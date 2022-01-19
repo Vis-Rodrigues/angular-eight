@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CartService } from '../cart.service';
 import { ProductService } from '../product.service';
 
 @Component({
@@ -12,8 +13,16 @@ export class ProductListComponent {
 
   brands = ["Todos", "Vegano", "Vegetariano", "Sem glúten"];
   selectedBrand = "Todos";
+  loading = false;
+  currentRate = 5;
+
+  TYPE_VEGAN = "isVegan";
+  TYPE_VEGETARIAN = "isVegetarian";
+  TYPE_GLUTEN_FREE = "isGlutenFree";
+  
   constructor(
-    private productService: ProductService
+    private productService: ProductService,
+    private cartService: CartService
   ) { }
 
   ngOnInit(): void {
@@ -21,11 +30,17 @@ export class ProductListComponent {
     console.warn("products " + this.products);
   }
 
-  share() {
-    window.alert('Muito obrigada pela preferência, é um prazer tê-lo aqui conosco! Seus itens estão sendo preparados e logo serão entregues. =D');
+  getProductByFilter(filter: string) {
+    console.warn("filter " + filter);
+    this.products = this.productService.getProductsByFilter(filter);
   }
 
   onNotify() {
     window.alert('You will be notified when the product goes on sale');
+  }
+
+  addToCart(product: any) {
+    this.cartService.addToCart(product);
+    window.alert('Your product has been added to the cart!');
   }
 }
