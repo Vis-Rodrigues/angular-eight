@@ -29,7 +29,7 @@ body {
 }
 
 router-outlet + *  {
-  padding: 0 80px;
+  padding: 0 0px;
 }
 
 /* Text */
@@ -166,3 +166,5 @@ app-footer-bar {
   border-radius: 2px;
   background-color: #EEEEEE;
 }
+
+/* CARD */
