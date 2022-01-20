@@ -17,10 +17,18 @@ Execute o comando abaixo para iniciar a aplicação:
 
 > A partir da execução local a aplicação estará disponível em [http://localhost:4200](http://localhost:4200)
 
-É possível alterar a porta de start com esse comando:
+É possível alterar a `porta de start` com esse comando:
 ```ssh
 ng serve --open --port PORT_NUMBER
 ```
+
+## Build
+
+Execute o comando abaixo para realizar o build do projeto. Os artefatos do build serão armazenados no diretório `dist/`.
+```ssh
+ng build
+```
+
 ## :warning: Dependências
 Para rodar essa aplicação com sucesso, primeiro precisa iniciar o serviço Spring:
 
