@@ -54,11 +54,18 @@ p {
 
 a {
   cursor: pointer;
-  color: #1976d2;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+a:not([href]):not([tabindex]){
+  cursor: pointer;
+  color: #ffffff;
   text-decoration: none;
 }
 
 a:hover {
+  color: #ffffff;
   opacity: 0.8;
 }
 
@@ -84,13 +91,16 @@ label {
 .button, button {
   display: inline-flex;
   align-items: center;
-  padding: 10px 24px;
+  padding: 5px 24px;
   border-radius: 12px;
   border: solid #24a428;
   font-size: 14px;
   cursor: pointer;
   background-color: #28b62c;
-  color: white;
+}
+
+.button-space {
+  margin-left: 20px;
 }
 
 .button:hover, button:hover {
