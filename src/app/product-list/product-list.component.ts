@@ -26,8 +26,12 @@ export class ProductListComponent {
   ) { }
 
   ngOnInit(): void {
-    this.products = this.productService.getProducts();
-    console.warn("products " + this.products);
+    this.productService.getProducts().subscribe(
+      success => {
+        this.products = success;
+      }, error => {
+        console.error("error " + error);
+      });
   }
 
   getProductByFilter(filter: string) {
