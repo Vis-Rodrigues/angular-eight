@@ -56,10 +56,8 @@
                   <div class="view overlay hm-white-slight">
                     <img
                       [src]="product.imageUrl"
-                      class="img-fluid"
-                      alt=""
-                      width="360px"
-                      height="640px"
+                      [alt]="product.name"
+                      class="img-fluid card-list-img"
                     />
                     <a>
                       <div
@@ -78,12 +76,12 @@
                   <a class="text-muted">
                     <h5>{{ product.brand }}</h5>
                   </a>
-                  <h5 class="card-title">
+                  <h6 class="card-title">
                     <strong>
                       <a [routerLink]="['/products', product.id]">
                         {{ product.name }}</a>
                     </strong>
-                  </h5>
+                  </h6>
 
                   <!--Description-->
                   <p class="card-text">{{ product.description }}</p>

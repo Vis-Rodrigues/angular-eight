@@ -110,3 +110,15 @@
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
+
+a {
+  cursor: pointer;
+  color: #000000;
+  text-decoration: none;
+}
+
+.card-list-img {
+  max-width: 250px;
+  height: 200px;
+  padding: auto;
+}
