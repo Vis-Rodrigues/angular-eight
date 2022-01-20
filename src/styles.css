@@ -65,8 +65,9 @@ a:not([href]):not([tabindex]){
 }
 
 a:hover {
-  color: #ffffff;
+  color: #000000;
   opacity: 0.8;
+  text-decoration: none;
 }
 
 /* Input */
