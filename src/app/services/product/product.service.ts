@@ -21,7 +21,7 @@ export class ProductService {
   ) {}
 
   getProducts() {
-    let headers = new HttpHeaders().set('Content-Type', 'applicatino/json');
+    let headers = new HttpHeaders().set('Content-Type', 'application/json');
     let httpOptions = {
       headers: headers
     };
@@ -37,8 +37,11 @@ export class ProductService {
   }
 
   getProductById(id: string) {
-    this.http.get<Product>(urlBase.concat("/").concat(id))
+    let url = urlBase.concat("/").concat(id);
+    console.warn("url " + url);
+    return this.http.get(url)
       .pipe(map(data => {
+        console.warn("data: " + data)
         return data;
     }));
   }

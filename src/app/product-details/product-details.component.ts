@@ -19,10 +19,16 @@ export class ProductDetailsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    const routeParams = this.route.snapshot.paramMap;
-    const productIdFromRoute = String(routeParams.get('productId'));
-    this.productService.getProductById(productIdFromRoute);
-    console.log("Product " + this.product);
+    let routeParams = this.route.snapshot.paramMap;
+    let productIdFromRoute = String(routeParams.get('productId'));
+    this.product = this.productService.getProductById(productIdFromRoute).subscribe(
+      success => {
+        this.product = success;
+      }, error => {
+        console.error("Error: " + error);
+      }
+    );
+    console.log("Product " + String(this.product));
   }
 
   addToCart(product: any) {

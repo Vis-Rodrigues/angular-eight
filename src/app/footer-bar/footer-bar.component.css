@@ -1,3 +1,16 @@
-.page-footer {
+/* Footer Bar */
+
+h5 {
+  background-color: black;
+  padding: 20px;
+  margin: 0;
+  position: absolute;
+  width: 100%;
   bottom: 0;
+  flex-direction: row;
+  flex: auto;
+  
+  /* height: 68px;
+  display: flex;
+  align-items: center; */
 }

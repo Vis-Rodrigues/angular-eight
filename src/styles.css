@@ -3,12 +3,8 @@
 
 router-outlet ~ * {
   position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-* {
-  font-family: "Ubuntu", sans-serif;
+  /* width: 100%; */
+  /* height: 100%; */
 }
 
 * {
@@ -20,7 +16,8 @@ router-outlet ~ * {
 }
 
 body {
-  margin: 0;
+  margin: 0px;
+  padding: 0px;
 }
 
 .container {
@@ -65,8 +62,9 @@ a:not([href]):not([tabindex]){
 }
 
 a:hover {
-  color: #ffffff;
+  color: #000000;
   opacity: 0.8;
+  text-decoration: none;
 }
 
 /* Input */
@@ -143,19 +141,6 @@ app-top-bar {
 app-top-bar h1 {
   color: white;
   margin: 0;
-}
-
-/* Footer Bar */
-
-app-footer-bar {
-  width: 100%;
-  height: 68px;
-  background: black;
-  padding: 16px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  bottom: 0;
 }
 
 /* Checkout Cart, Shipping Prices */
