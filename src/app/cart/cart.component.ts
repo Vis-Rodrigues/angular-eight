@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { CartService } from '../services/cart/cart.service';
+import { Product } from "../services/product/product";
 
 @Component({
   selector: 'app-cart',
@@ -27,18 +28,16 @@ export class CartComponent implements OnInit {
     this.checkoutForm.reset();
   }
 
-  closeBuy() {
-    this.cartService.clearCart();
-    window.alert('Muito obrigada pela preferência, é um prazer tê-lo aqui conosco! Seus itens estão sendo preparados e logo serão entregues. =D');
-    this.reloadCurrentPage();
+  removeCartProduct(product: Product) {
+    this.items.remove(product);
+    // this.productService.removeLocalCartProduct(product);
+
+    // Recalling
+    this.getCartProduct();
   }
 
-  sumOfPrice(){
-    return this.cartService.sumOfPrice();
+  getCartProduct() {
+    // this.cartProducts = this.productService.getLocalCartProducts();
   }
-
-  reloadCurrentPage() {
-    window.location.reload();
-   }
 
 }

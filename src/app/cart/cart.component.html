@@ -1,7 +1,7 @@
 <br>
 <h1>Carrinho de compras</h1>
 <br />
-
+<!-- 
 
 <div *ngIf="items.length > 0; else cartEmpty">
     <h2>Lista de compras</h2>
@@ -35,10 +35,97 @@
         </div>
       </div>
     </div>
-</div>
+</div> -->
 
+
+
+
+<br />
+<div class="container" *ngIf="items.length > 0; else cartEmpty">
+  <div class="row">
+    <!-- List of Products -->
+    <div class="col-8">
+      <div class="row">
+        <div class="col-4" *ngFor="let product of items">
+          <div class="item">
+            <div class="mb-r">
+              <!--Card-->
+              <div class="card card-cascade wider">
+                <!--Card image-->
+                <a [routerLink]="['/products', product.id]">
+                  <div class="view overlay hm-white-slight">
+                    <img
+                      [src]="product.imageUrl"
+                      class="img-fluid"
+                      alt=""
+                      width="360px"
+                      height="640px"
+                    />
+                    <a>
+                      <div
+                        class="mask waves-effect waves-light"
+                        mdbRippleRadius
+                      ></div>
+                    </a>
+                  </div>
+                </a>
+
+                <!--/.Card image-->
+
+                <!--Card content-->
+                <div class="card-body text-center no-padding">
+                  <!--Category & Title-->
+                  <a class="text-muted">
+                    <h5>{{ product.brand }}</h5>
+                  </a>
+                  <h5 class="card-title">
+                    <strong>
+                      <a [routerLink]="['/products', product.id]">
+                        {{ product.name }}</a>
+                    </strong>
+                  </h5>
+
+                  <!--Description-->
+                  <p class="card-text">{{ product.description }}</p>
+
+                  <!--Card footer-->
+                  <div class="card-footer">
+                    <span class="left">R$ {{ product.price }}</span>
+                    <span class="right">
+                      <a
+                        placement="top"
+                        mdbTooltip="Quick Look"
+                        container="body"
+                        [routerLink]="['/products', product.id]"
+                      >
+                        <i class="fa fa-eye"></i>
+                      </a>
+                      <a
+                        placement="top"
+                        mdbTooltip="Remove Product"
+                        container="body"
+                        (click)="removeCartProduct(product)"
+                      >
+                        <i class="fa fa-trash"></i>
+                      </a>
+                    </span>
+                  </div>
+                </div>
+                <!--/.Card content-->
+              </div>
+              <!--/.Card-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-4">
+      <app-cart-calculator [products]="items"></app-cart-calculator>
+    </div>
+  </div>
+</div>
 <ng-template #cartEmpty>
-    <h2>Ainda não possui item :(</h2>
-    <h2>Por favor, escolha um produto.</h2><br />
-    <a class="button back-button" routerLink="">VOLTAR</a>
+  <h2>Ainda não possui item :(</h2>
+  <h2>Por favor, escolha um produto.</h2><br />
+  <a class="button back-button" routerLink="">VOLTAR</a>
 </ng-template>
