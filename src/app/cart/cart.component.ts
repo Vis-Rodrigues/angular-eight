@@ -30,10 +30,15 @@ export class CartComponent implements OnInit {
   closeBuy() {
     this.cartService.clearCart();
     window.alert('Muito obrigada pela preferência, é um prazer tê-lo aqui conosco! Seus itens estão sendo preparados e logo serão entregues. =D');
+    this.reloadCurrentPage();
   }
 
   sumOfPrice(){
     return this.cartService.sumOfPrice();
   }
+
+  reloadCurrentPage() {
+    window.location.reload();
+   }
 
 }

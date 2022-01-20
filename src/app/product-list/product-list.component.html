@@ -19,7 +19,7 @@
           <!-- List of Products -->
           <div
           class="col-sm-4 mb-2"
-          *ngFor="let product of products"
+          *ngFor="let product of products | async"
           >
           <div class="item">
             <div class="mb-r">

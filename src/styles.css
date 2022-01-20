@@ -99,10 +99,6 @@ label {
   background-color: #28b62c;
 }
 
-.button-space {
-  margin-left: 20px;
-}
-
 .button:hover, button:hover {
   opacity: 0.8;
   font-weight: normal;
