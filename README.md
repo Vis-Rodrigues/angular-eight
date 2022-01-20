@@ -1,4 +1,4 @@
-# EightShopWebAngular
+# Eight Shop - FIAP ETAPA 4 - Front-End com Angular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
 

@@ -27,29 +27,27 @@
               <div class="card card-cascade wider">
                 <!--Card image-->
                 <a [routerLink]="['/products', product.id]">
-                  <div class="view overlay hm-white-slight">
+                  <div class="card-img view overlay hm-white-slight">
                     <img
                     [src]="product.imageUrl"
-                    class="img-fluid"
-                    alt=""
-                        width="360px"
-                        height="640px"
+                    class="card-list-img img-fluid"
+                    [alt]="product.name"
                       />
-                      <a>
+                      <!-- <a>
                         <div
                           class="mask waves-effect waves-light"
                           mdbRippleRadius
                         ></div>
-                      </a>
+                      </a> -->
                     </div>
                   </a>
                   <!--/.Card image-->
                   <!--Card content-->
                   <div class="card-body text-center no-padding">
                     <!--Category & Title-->
-                    <a class="text-muted">
+                    <!-- <a class="text-muted">
                       <h5>{{ product.name }}</h5>
-                    </a>
+                    </a> -->
                     <p class="card-title">
                       <strong>
                         <a
@@ -63,25 +61,9 @@
                     <p class="card-text">{{ product.description }}</p>
                     <!--Card footer-->
                     <div class="card-footer">
-                      <span class="left">₹ {{ product.price }}</span>
+                      <span class="left">R$ {{ product.price }}</span>
                       <span class="right">
-                        <a
-                          placement="top"
-                          mdbTooltip="Add to Wishlist"
-                          container="body"
-                          (click)="onNotify()"
-                        >
-                          <i class="fa fa-heart"></i>
-                        </a>
-                        <a
-                          placement="top"
-                          mdbTooltip="Add to Cart"
-                          container="body"
-                          (click)="addToCart(product)"
-                        >
-                          <i class="fa fa-shopping-cart"></i>
-                        </a>
-                        <button (click)="addToCart(product)">Buy</button>
+                        <button (click)="addToCart(product)"><i class="material-icons">add_shopping_cart</i></button>
 
                         <!-- <a
                           placement="top"
