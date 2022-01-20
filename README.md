@@ -2,7 +2,7 @@
 
 Essa aplicação disponibiliza páginas Web para consulta de produtos veganos, vegetarianos e sem-glúten, além de permitir adição dos mesmos em um carrinho de compras virtual.
 
-:information_source: This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
+> This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
 
 ## Iniciar aplicação
 
@@ -16,8 +16,10 @@ Execute o comando abaixo para iniciar a aplicação:
 
 > A partir da execução local a aplicação estará disponível em [http://localhost:4200](http://localhost:4200)
 
-:pushpin: É possível alterar a porta de start com esse comando: ### ng serve --open --port PORT_NUMBER
-
+:pushpin: É possível alterar a porta de start com esse comando:
+```ssh
+  ng serve --open --port PORT_NUMBER
+```
 ## :warning: Dependências
 Para rodar essa aplicação com sucesso, primeiro precisa iniciar o serviço Spring:
 
