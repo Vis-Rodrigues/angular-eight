@@ -7,8 +7,9 @@ Essa aplicação disponibiliza páginas Web para consulta de produtos veganos, v
 ## Iniciar aplicação
 
 Execute o comando abaixo para instalar as dependências:
-
-### `npm install`
+```ssh
+npm install
+```
 
 Execute o comando abaixo para iniciar a aplicação:
 
@@ -16,9 +17,9 @@ Execute o comando abaixo para iniciar a aplicação:
 
 > A partir da execução local a aplicação estará disponível em [http://localhost:4200](http://localhost:4200)
 
-:pushpin: É possível alterar a porta de start com esse comando:
+É possível alterar a porta de start com esse comando:
 ```ssh
-  ng serve --open --port PORT_NUMBER
+ng serve --open --port PORT_NUMBER
 ```
 ## :warning: Dependências
 Para rodar essa aplicação com sucesso, primeiro precisa iniciar o serviço Spring:
