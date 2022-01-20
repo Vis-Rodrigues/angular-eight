@@ -13,7 +13,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { ShippingComponent } from './shipping/shipping.component';
 import { FooterBarComponent } from './footer-bar/footer-bar.component';
 import { CartCalculatorComponent } from './cart-calculator/cart-calculator.component';
-import { ProductFavoriteComponent } from './product-favorite/product-favorite.component';
 import { ProductNotFoundComponent } from './product-not-found/product-not-found.component';
  
 @NgModule({
@@ -25,8 +24,7 @@ import { ProductNotFoundComponent } from './product-not-found/product-not-found.
     { path: '', component: ProductListComponent },
     { path: 'products/:productId', component: ProductDetailsComponent },
     { path: 'cart', component: CartComponent },
-    { path: 'shipping', component: ShippingComponent },
-    { path: 'favorites', component: ProductFavoriteComponent },
+    { path: 'shipping', component: ShippingComponent }
   ])
  ],
  declarations: [
@@ -39,7 +37,6 @@ import { ProductNotFoundComponent } from './product-not-found/product-not-found.
    ShippingComponent,
    FooterBarComponent,
    CartCalculatorComponent,
-   ProductFavoriteComponent,
    ProductNotFoundComponent
  ],
  bootstrap: [
