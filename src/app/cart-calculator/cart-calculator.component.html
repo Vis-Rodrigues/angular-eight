@@ -10,7 +10,7 @@
     <div>
       <h6 class="my-0">{{ product.name }}</h6>
     </div>
-    <span class="text-muted text-price">R$ {{ product.price }}</span>
+    <span class="text-muted text-price">R$ {{ product.price | number : '1.2-2' }}</span>
   </li>
   <hr />
   <li class="list-group-item d-flex justify-content-between">

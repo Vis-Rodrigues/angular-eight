@@ -18,6 +18,8 @@ body {
 .container {
   display: flex;
   flex-direction: row;
+  margin-left: auto;
+  margin-right: auto; 
 }
 
 router-outlet + *  {
@@ -60,12 +62,10 @@ a:not([href]):not([tabindex]):hover{
 }
 
 a:hover {
-  color: #000000;
+  color: #ffffff;
   opacity: 0.8;
   text-decoration: none;
 }
-
-/* Input */
 
 input {
   font-size: 14px;
@@ -83,7 +83,6 @@ label {
   text-transform: uppercase;
 }
 
-/* Button */
 .button, button {
   display: inline-flex;
   align-items: center;
@@ -110,8 +109,6 @@ label {
   border: solid #075fe3;
 }
 
-/* Fancy Button */
-
 .fancy-button {
   background-color: white;
   color: #478303;
@@ -121,8 +118,6 @@ label {
   color: #478303;
   padding-right: 4px;
 }
-
-/* Top Bar */
 
 app-top-bar {
   width: 100%;
@@ -140,8 +135,6 @@ app-top-bar h1 {
   color: white;
   margin: 0;
 }
-
-/* Checkout Cart, Shipping Prices */
 
 .cart-item, .shipping-item {
   width: 100%;
