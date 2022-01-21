@@ -48,7 +48,7 @@ OU
 ng g c NOME-COMPONENTE
 ```
 
-Para criar um novo serviço utilize o comando abaixo:
+Para criar um novo serviço, utilize o comando abaixo:
 ```ssh
 ng generate service NOME-SERVICO
 ```
@@ -58,5 +58,6 @@ ng g s NOME-SERVICO
 ```
 
 ## :rocket: Próximos passos
+* Adicionar pagamento
 * Adicionar autenticação
 * Implementar a chamada do serviço de carrinho

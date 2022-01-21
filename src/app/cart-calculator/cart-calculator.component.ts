@@ -6,6 +6,7 @@ import {
   SimpleChange,
   SimpleChanges,
 } from "@angular/core";
+import { Router } from "@angular/router";
 import { CartService } from "../services/cart/cart.service";
 import { Product } from "../services/product/product";
 
@@ -18,7 +19,8 @@ export class CartCalculatorComponent implements OnInit, OnChanges {
   @Input() products: any;
 
   totalValue = 0;
-  constructor(private cartService: CartService) {}
+  constructor(private cartService: CartService,
+              private route: Router) {}
 
   ngOnChanges(changes: SimpleChanges) {
     const dataChanges: SimpleChange = changes["products"];
@@ -34,8 +36,11 @@ export class CartCalculatorComponent implements OnInit, OnChanges {
 
   closeBuy() {
     this.cartService.clearCart();
+    this.products = null;
     window.alert('Muito obrigada pela preferência, é um prazer tê-lo aqui conosco! Seus itens estão sendo preparados e logo serão entregues. =D');
-    this.reloadCurrentPage();
+    this.route.navigate(['/']);
+
+    // this.reloadCurrentPage();
   }
 
   sumOfPrice(){
