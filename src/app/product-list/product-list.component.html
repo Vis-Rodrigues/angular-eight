@@ -10,22 +10,14 @@
   <div class="row">
   <div class="col-md-9">
     <div class="container">
-      <!-- <app-card-loader
-        [loop]="3"
-        [height]="800"
-        *ngIf="loading"
-        ></app-card-loader> -->
-        <div class="row" *ngIf="!loading">
-          <!-- List of Products -->
+        <div class="row">
           <div
           class="col-sm-4 mb-2"
           *ngFor="let product of products | async"
           >
           <div class="item">
             <div class="mb-r">
-              <!--Card-->
               <div class="card card-cascade wider">
-                <!--Card image-->
                 <a [routerLink]="['/products', product.id]">
                   <div class="card-img view overlay hm-white-slight">
                     <img
@@ -33,21 +25,9 @@
                     class="card-list-img img-fluid"
                     [alt]="product.name"
                       />
-                      <!-- <a>
-                        <div
-                          class="mask waves-effect waves-light"
-                          mdbRippleRadius
-                        ></div>
-                      </a> -->
                     </div>
                   </a>
-                  <!--/.Card image-->
-                  <!--Card content-->
                   <div class="card-body text-center no-padding">
-                    <!--Category & Title-->
-                    <!-- <a class="text-muted">
-                      <h5>{{ product.name }}</h5>
-                    </a> -->
                     <p class="card-title">
                       <strong>
                         <a
@@ -57,41 +37,21 @@
                         >
                       </strong>
                     </p>
-                    <!--Description-->
                     <p class="card-text">{{ product.description }}</p>
-                    <!--Card footer-->
                     <div class="card-footer">
                       <span class="left">R$ {{ product.price }}</span>
                       <span class="right">
                         <button (click)="addToCart(product)"><i class="material-icons">add_shopping_cart</i></button>
-
-                        <!-- <a
-                          placement="top"
-                          mdbTooltip="Remove Product"
-                          container="body"
-                          *ngIf="authService.isAdmin$ | async"
-                          (click)="removeProduct(product.$key)"
-                        >
                           <i class="fa fa-trash"></i>
-                        </a> -->
                       </span>
                     </div>
                   </div>
-                  <!--/.Card content-->
                 </div>
-                <!--/.Card-->
               </div>
             </div>
           </div>
         </div>
-        <!-- Pagination -->
-        <!-- <div class="text-center mt-3">
-          <pagination-controls
-            (pageChange)="page = $event"
-          ></pagination-controls>
-        </div> -->
       </div>
-      <!--/.Card-->
     </div>
   </div>
 </div>

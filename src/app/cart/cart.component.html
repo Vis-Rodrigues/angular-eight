@@ -1,57 +1,15 @@
 <br>
 <h1>Carrinho de compras</h1>
 <br />
-<!-- 
 
-<div *ngIf="items.length > 0; else cartEmpty">
-    <h2>Lista de compras</h2>
-
-    <div class="cart-item" *ngFor="let item of items">
-      <img
-        [src]="item.imageUrl"
-        [alt]="item.name"
-        width="40%"
-        class="img-fluid rounded"
-      />
-      <p>{{ item.name }}</p>
-      <span>{{ item.name }}</span>
-      <span>{{ item.price | currency }}</span>
-      <span>1</span>
-    </div>
-  
-    <a class="button" routerLink="">+ Adicionar Itens</a>
-    
-    <hr>
-    <div class="container">
-      <div class="row">
-          <div 
-            class="card" 
-            style="width: 25rem;">
-              <div class="card-body">
-                <h5 class="card-title">SUBTOTAL ({{items.length}}) ITEMS</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Total R$ {{ sumOfPrice() | currency }}</h6>
-                <h6 class="card-footer mb-1"><a class="button" (click)="closeBuy()">FINALIZAR COMPRA</a></h6>
-              </div>
-        </div>
-      </div>
-    </div>
-</div> -->
-
-
-
-
-<br />
 <div class="container" *ngIf="items.length > 0; else cartEmpty">
   <div class="row">
-    <!-- List of Products -->
     <div class="col-8">
       <div class="row">
         <div class="col-4" *ngFor="let product of items">
           <div class="item">
             <div class="mb-r">
-              <!--Card-->
               <div class="card card-cascade wider">
-                <!--Card image-->
                 <a [routerLink]="['/products', product.id]">
                   <div class="view overlay hm-white-slight">
                     <img
@@ -68,11 +26,7 @@
                   </div>
                 </a>
 
-                <!--/.Card image-->
-
-                <!--Card content-->
                 <div class="card-body text-center no-padding">
-                  <!--Category & Title-->
                   <a class="text-muted">
                     <h5>{{ product.brand }}</h5>
                   </a>
@@ -83,10 +37,7 @@
                     </strong>
                   </h6>
 
-                  <!--Description-->
                   <p class="card-text">{{ product.description }}</p>
-
-                  <!--Card footer-->
                   <div class="card-footer">
                     <span class="left">R$ {{ product.price }}</span>
                     <span class="right">
@@ -109,9 +60,7 @@
                     </span>
                   </div>
                 </div>
-                <!--/.Card content-->
               </div>
-              <!--/.Card-->
             </div>
           </div>
         </div>
@@ -123,7 +72,5 @@
   </div>
 </div>
 <ng-template #cartEmpty>
-  <h2>Ainda não possui item :(</h2>
-  <h2>Por favor, escolha um produto.</h2><br />
-  <a class="button back-button" routerLink="">VOLTAR</a>
+  <app-product-not-found></app-product-not-found>
 </ng-template>

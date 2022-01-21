@@ -26,14 +26,14 @@ export class ProductDetailsComponent implements OnInit {
         this.product = success;
       }, error => {
         console.error("Error: " + error);
+        window.alert("Erro na busca dos produtos");
       }
     );
-    console.log("Product " + String(this.product));
   }
 
   addToCart(product: any) {
     this.cartService.addToCart(product);
-    window.alert('Your product has been added to the cart!');
+    window.alert('Seu produto foi adicionado ao carrinho!');
   }
 
 }

@@ -31,10 +31,6 @@ export class CartService {
     return this.items;
   }
 
-  getShippingPrices() {
-    return this.http.get<{type: string, price: number}[]>('/assets/shipping.json');
-  }
-
   sumOfPrice() {
     return this.items.reduce((sum: number, { price }: any) => sum + price, 0)
   }

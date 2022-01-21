@@ -1,8 +1,12 @@
 # Eight Shop - FIAP ETAPA 4 - Front-End com Angular
+[![Generic badge](https://img.shields.io/badge/URL-Pagina-green.svg)](http://eight-shop.s3-website-us-east-1.amazonaws.com/)
+[![Generic badge](https://img.shields.io/badge/Linguagem-Angular-red.svg)](https://angular.io/)
 
 Essa aplicação disponibiliza páginas Web para consulta de produtos veganos, vegetarianos e sem-glúten, além de permitir adição dos mesmos em um carrinho de compras virtual.
 
-> This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
+### Link de acesso da página: Angular-shopping-cart
+
+> Projeto gerado com [Angular CLI](https://github.com/angular/angular-cli) versão 13.1.2.
 
 ## Iniciar aplicação
 
@@ -29,11 +33,16 @@ Execute o comando abaixo para realizar o build do projeto. Os artefatos do build
 ng build
 ```
 
-## :warning: Dependências
-Para rodar essa aplicação com sucesso, primeiro precisa iniciar o serviço Spring:
+## :warning: Integrações
+Esta aplicação consome o serviço Spring que está deployado no EC2 da AWS.<br>
+Código fonte do serviço: `[fiap-fase3ws](https://github.com/Vis-Rodrigues/fiap-fase3ws)`
 
-### [fiap-fase3ws](https://github.com/Vis-Rodrigues/fiap-fase3ws)
+## Comandos úteis
 
+Execute o comando abaixo para realizar o build do projeto. Os artefatos do build serão armazenados no diretório `dist/`.
+```ssh
+ng build
+```
 ## :rocket: Próximos passos
 * Adicionar autenticação
 * Implementar a chamada do serviço de carrinho

@@ -10,28 +10,19 @@ import { Product } from "../services/product/product";
 })
 export class CartComponent implements OnInit {
   items = this.cartService.getItems();
-  checkoutForm = this.formBuilder.group({
-    name: '',
-    address: '',
-  });
 
   constructor(
     private cartService: CartService,
-    private formBuilder: FormBuilder
   ) {}
 
   ngOnInit(): void {}
 
   onSubmit(): void {
     this.items = this.cartService.clearCart();
-    console.warn('Your order has been submitted', this.checkoutForm.value);
-    this.checkoutForm.reset();
   }
 
   removeCartProduct(product: Product) {
     this.items.remove(product);
-    // this.productService.removeLocalCartProduct(product);
-
     // Recalling
     this.getCartProduct();
   }

@@ -14,3 +14,7 @@ body {
 .product-ship {
   height: 15rem;
 }
+
+button {
+  color: #ffffff;
+}

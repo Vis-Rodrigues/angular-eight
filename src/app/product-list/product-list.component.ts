@@ -11,11 +11,6 @@ export class ProductListComponent {
 
   products: any;
 
-  brands = ["Todos", "Vegano", "Vegetariano", "Sem glúten"];
-  selectedBrand = "Todos";
-  loading = false;
-  currentRate = 5;
-
   TYPE_VEGAN = "isVegan";
   TYPE_VEGETARIAN = "isVegetarian";
   TYPE_GLUTEN_FREE = "isGlutenFree";
@@ -30,12 +25,7 @@ export class ProductListComponent {
   }
 
   getProductByFilter(filter: string) {
-    console.warn("filter " + filter);
     this.products = this.productService.getProductsByFilter(filter);
-  }
-
-  onNotify() {
-    window.alert('You will be notified when the product goes on sale');
   }
 
   addToCart(product: any) {
