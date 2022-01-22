@@ -1,6 +1,35 @@
+.button {
+  margin-left: 20px;
+}
+
+.section .section-heading {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+.section-heading {
+  text-align: center;
+}
+.section-description {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.section-description {
+  color: #757575;
+  margin-bottom: 4rem;
+  margin-left: 15%;
+  margin-right: 15%;
+  text-align: center;
+}
+
 .section img {
   max-width: 100%;
   height: auto;
+}
+
+.card-list-img {
+  max-width: 300px;
+  height: 250px;
+  padding: auto;
 }
 
 .card.card-cascade.narrower {
@@ -31,6 +60,7 @@
 .reply-form img,
 .testimonial-carousel .testimonial .avatar img,
 .z-depth-2 {
+  color: #ffffff;
   -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2),
     0 6px 20px 0 rgba(0, 0, 0, 0.19);
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -50,4 +80,26 @@
 
 .card .rating {
   color: #ffa000;
+}
+
+.card-text {
+  line-height: 20px;
+  height: 60px;
+  overflow: hidden;
+}
+
+.card .card-footer {
+  background-color: transparent;
+}
+
+.card .card-footer .left {
+  float: left;
+}
+
+.card .card-footer .right {
+  float: right;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }

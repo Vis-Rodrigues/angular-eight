@@ -1,27 +1,63 @@
-# EightShopWebAngular
+# Eight Shop - FIAP ETAPA 4 - Front-End com Angular
+[![Generic badge](https://img.shields.io/badge/URL-Pagina-green.svg)](http://eight-shop.s3-website-us-east-1.amazonaws.com/)
+[![Generic badge](https://img.shields.io/badge/Linguagem-Angular-red.svg)](https://angular.io/)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
+Essa aplicação disponibiliza páginas Web para consulta de produtos veganos, vegetarianos e sem-glúten, além de permitir adição dos mesmos em um carrinho de compras virtual.
 
-## Development server
+### Link de acesso da página: [Angular-shopping-cart](http://eight-shop.s3-website-us-east-1.amazonaws.com/)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+> Projeto gerado com [Angular CLI](https://github.com/angular/angular-cli) versão 13.1.2.
 
-## Code scaffolding
+## Iniciar aplicação
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Execute o comando abaixo para instalar as dependências:
+```ssh
+npm install
+```
+
+Execute o comando abaixo para iniciar a aplicação:
+```ssh
+ng serve --open
+```
+> A partir da execução local a aplicação estará disponível em [http://localhost:4200](http://localhost:4200)
+
+É possível alterar a `porta de start` com esse comando:
+```ssh
+ng serve --open --port PORT_NUMBER
+```
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Execute o comando abaixo para realizar o build do projeto. Os artefatos serão armazenados no diretório `dist/`.
+```ssh
+ng build
+```
 
-## Running unit tests
+## :warning: Integrações
+Esta aplicação consome o serviço Spring que está deployado no EC2 da AWS.<br>
+**Código fonte do serviço:** [`fiap-fase3ws`](https://github.com/Vis-Rodrigues/fiap-fase3ws)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Comandos úteis
 
-## Running end-to-end tests
+Para criar um novo componente, utilize o comando abaixo:
+```ssh
+ng generate component NOME-COMPONENTE
+```
+OU
+```ssh
+ng g c NOME-COMPONENTE
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Para criar um novo serviço, utilize o comando abaixo:
+```ssh
+ng generate service NOME-SERVICO
+```
+OU
+```ssh
+ng g s NOME-SERVICO
+```
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## :rocket: Próximos passos
+* Adicionar pagamento
+* Adicionar autenticação
+* Implementar a chamada do serviço de carrinho
