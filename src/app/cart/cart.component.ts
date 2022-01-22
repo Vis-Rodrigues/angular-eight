@@ -21,14 +21,4 @@ export class CartComponent implements OnInit {
     this.items = this.cartService.clearCart();
   }
 
-  removeCartProduct(product: Product) {
-    this.items.remove(product);
-    // Recalling
-    this.getCartProduct();
-  }
-
-  getCartProduct() {
-    // this.cartProducts = this.productService.getLocalCartProducts();
-  }
-
 }

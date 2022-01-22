@@ -39,17 +39,10 @@ export class CartCalculatorComponent implements OnInit, OnChanges {
     this.products = null;
     window.alert('Muito obrigada pela preferência, é um prazer tê-lo aqui conosco! Seus itens estão sendo preparados e logo serão entregues. =D');
     this.route.navigate(['/']);
-
-    // this.reloadCurrentPage();
   }
 
   sumOfPrice(){
     return this.cartService.sumOfPrice();
   }
-
-  reloadCurrentPage() {
-    window.location.reload();
-  }
-
 
 }
